@@ -1,5 +1,5 @@
 name: Output information
-on:
+on: workflow_dispatch
   issues:
     types: opened
 jobs:
@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Output Github context
         #metadat variable
-        run: echo "${{ toJSON(github)  }}"
+        run: echo "${{ toJSON(github.event)  }}"
