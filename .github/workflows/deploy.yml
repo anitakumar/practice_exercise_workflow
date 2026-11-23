@@ -10,7 +10,6 @@ on: [push, workflow_dispatch] # add muliplt events, you wil get runworkflow butt
 jobs:
   # two jobs created and then will run in parallel running separately on the runners
   lint:
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,7 +24,7 @@ jobs:
       - name: Lint check
         run: npm run lint
   test:
-    needs: test
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
