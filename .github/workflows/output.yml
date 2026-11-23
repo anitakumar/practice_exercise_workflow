@@ -1,5 +1,6 @@
 name: Output information
-on: 
+on:
+  workflow_dispatch:
   issues:
     types: 
       - opened
