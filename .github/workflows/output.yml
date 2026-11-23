@@ -1,7 +1,8 @@
 name: Output information
 on: workflow_dispatch
   issues:
-    types: opened
+    types: 
+      - opened
 jobs:
   info:
     runs-on: ubuntu-latest
